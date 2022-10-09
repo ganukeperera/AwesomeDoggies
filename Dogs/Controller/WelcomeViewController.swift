@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,5 +15,15 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension WelcomeViewController{
+    private func addLoadingView(){
+        
+    }
+    
+    private func removeLoadinView(){
+        
+    }
 }
 

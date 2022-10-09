@@ -9,23 +9,36 @@
 /* Begin PBXBuildFile section */
 		C390BC4D28F238B9004336C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC4C28F238B9004336C4 /* AppDelegate.swift */; };
 		C390BC4F28F238B9004336C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC4E28F238B9004336C4 /* SceneDelegate.swift */; };
-		C390BC5128F238B9004336C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC5028F238B9004336C4 /* ViewController.swift */; };
+		C390BC5128F238B9004336C4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC5028F238B9004336C4 /* WelcomeViewController.swift */; };
 		C390BC5428F238B9004336C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C390BC5228F238B9004336C4 /* Main.storyboard */; };
 		C390BC5728F238B9004336C4 /* Dogs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C390BC5528F238B9004336C4 /* Dogs.xcdatamodeld */; };
 		C390BC5928F238BB004336C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C390BC5828F238BB004336C4 /* Assets.xcassets */; };
 		C390BC5C28F238BB004336C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C390BC5A28F238BB004336C4 /* LaunchScreen.storyboard */; };
+		C390BC6928F23E24004336C4 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC6828F23E24004336C4 /* NetworkEngine.swift */; };
+		C390BC6B28F23F7A004336C4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC6A28F23F7A004336C4 /* Endpoint.swift */; };
+		C390BC6D28F2420F004336C4 /* DogEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC6C28F2420F004336C4 /* DogEndpoint.swift */; };
+		C390BC6F28F2965B004336C4 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC6E28F2965B004336C4 /* ResponseModels.swift */; };
+		C390BC7228F2DCF3004336C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C390BC7428F2DCF3004336C4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C390BC4928F238B9004336C4 /* Dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390BC4C28F238B9004336C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C390BC4E28F238B9004336C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C390BC5028F238B9004336C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C390BC5028F238B9004336C4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C390BC5328F238B9004336C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C390BC5628F238B9004336C4 /* Dogs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dogs.xcdatamodel; sourceTree = "<group>"; };
 		C390BC5828F238BB004336C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C390BC5B28F238BB004336C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C390BC5D28F238BB004336C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C390BC6828F23E24004336C4 /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
+		C390BC6A28F23F7A004336C4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C390BC6C28F2420F004336C4 /* DogEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogEndpoint.swift; sourceTree = "<group>"; };
+		C390BC6E28F2965B004336C4 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
+		C390BC7328F2DCF3004336C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C390BC7528F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		C390BC7628F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C390BC7728F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +55,7 @@
 		C390BC4028F238B9004336C4 = {
 			isa = PBXGroup;
 			children = (
+				C390BC7428F2DCF3004336C4 /* Localizable.strings */,
 				C390BC4B28F238B9004336C4 /* Dogs */,
 				C390BC4A28F238B9004336C4 /* Products */,
 			);
@@ -60,14 +74,58 @@
 			children = (
 				C390BC4C28F238B9004336C4 /* AppDelegate.swift */,
 				C390BC4E28F238B9004336C4 /* SceneDelegate.swift */,
-				C390BC5028F238B9004336C4 /* ViewController.swift */,
-				C390BC5228F238B9004336C4 /* Main.storyboard */,
+				C390BC6628F23A2E004336C4 /* Utilities */,
+				C390BC6328F239FC004336C4 /* Model */,
+				C390BC6428F23A04004336C4 /* View */,
+				C390BC6528F23A14004336C4 /* Controller */,
 				C390BC5828F238BB004336C4 /* Assets.xcassets */,
 				C390BC5A28F238BB004336C4 /* LaunchScreen.storyboard */,
 				C390BC5D28F238BB004336C4 /* Info.plist */,
 				C390BC5528F238B9004336C4 /* Dogs.xcdatamodeld */,
 			);
 			path = Dogs;
+			sourceTree = "<group>";
+		};
+		C390BC6328F239FC004336C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C390BC6E28F2965B004336C4 /* ResponseModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C390BC6428F23A04004336C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C390BC5228F238B9004336C4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C390BC6528F23A14004336C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C390BC5028F238B9004336C4 /* WelcomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C390BC6628F23A2E004336C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C390BC6728F23DF4004336C4 /* NetworkEngine */,
+				C390BC6C28F2420F004336C4 /* DogEndpoint.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C390BC6728F23DF4004336C4 /* NetworkEngine */ = {
+			isa = PBXGroup;
+			children = (
+				C390BC6828F23E24004336C4 /* NetworkEngine.swift */,
+				C390BC6A28F23F7A004336C4 /* Endpoint.swift */,
+			);
+			path = NetworkEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +170,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = C390BC4028F238B9004336C4;
 			productRefGroup = C390BC4A28F238B9004336C4 /* Products */;
@@ -129,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C390BC5C28F238BB004336C4 /* LaunchScreen.storyboard in Resources */,
+				C390BC7228F2DCF3004336C4 /* Localizable.strings in Resources */,
 				C390BC5928F238BB004336C4 /* Assets.xcassets in Resources */,
 				C390BC5428F238B9004336C4 /* Main.storyboard in Resources */,
 			);
@@ -141,9 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C390BC5128F238B9004336C4 /* ViewController.swift in Sources */,
+				C390BC5128F238B9004336C4 /* WelcomeViewController.swift in Sources */,
+				C390BC6928F23E24004336C4 /* NetworkEngine.swift in Sources */,
+				C390BC6F28F2965B004336C4 /* ResponseModels.swift in Sources */,
 				C390BC4D28F238B9004336C4 /* AppDelegate.swift in Sources */,
+				C390BC6D28F2420F004336C4 /* DogEndpoint.swift in Sources */,
 				C390BC5728F238B9004336C4 /* Dogs.xcdatamodeld in Sources */,
+				C390BC6B28F23F7A004336C4 /* Endpoint.swift in Sources */,
 				C390BC4F28F238B9004336C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +219,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C390BC5328F238B9004336C4 /* Base */,
+				C390BC7528F2DDA1004336C4 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -163,8 +228,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				C390BC5B28F238BB004336C4 /* Base */,
+				C390BC7628F2DDA1004336C4 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C390BC7428F2DCF3004336C4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C390BC7328F2DCF3004336C4 /* en */,
+				C390BC7728F2DDA1004336C4 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -174,6 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -235,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
