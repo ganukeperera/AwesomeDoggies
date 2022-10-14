@@ -24,9 +24,9 @@ class NetworkEngine{
         
         let session = URLSession(configuration: .default)
         let urlRequest = URLRequest(url: url)
-        session.dataTask(with: urlRequest) { data, response, error in
+        let dataTask = session.dataTask(with: urlRequest) { data, response, error in
             
-            guard error != nil else{
+            guard error == nil else{
                 completion(.failure(error!))
                 return
             }
@@ -50,6 +50,6 @@ class NetworkEngine{
                 completion(.success(responseObject))
             }
         }
-        
+        dataTask.resume()
     }
 }

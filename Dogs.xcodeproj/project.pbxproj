@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C37412C928F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */; };
 		C390BC4D28F238B9004336C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC4C28F238B9004336C4 /* AppDelegate.swift */; };
 		C390BC4F28F238B9004336C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC4E28F238B9004336C4 /* SceneDelegate.swift */; };
 		C390BC5128F238B9004336C4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC5028F238B9004336C4 /* WelcomeViewController.swift */; };
@@ -19,9 +20,13 @@
 		C390BC6D28F2420F004336C4 /* DogEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC6C28F2420F004336C4 /* DogEndpoint.swift */; };
 		C390BC6F28F2965B004336C4 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC6E28F2965B004336C4 /* ResponseModels.swift */; };
 		C390BC7228F2DCF3004336C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C390BC7428F2DCF3004336C4 /* Localizable.strings */; };
+		C3B0971428F30FD5002104F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971328F30FD5002104F0 /* Constants.swift */; };
+		C3B0971828F31247002104F0 /* BreedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971728F31247002104F0 /* BreedsTableViewController.swift */; };
+		C3B0971D28F39103002104F0 /* BreedImagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ThumbnailImage.swift"; sourceTree = "<group>"; };
 		C390BC4928F238B9004336C4 /* Dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390BC4C28F238B9004336C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C390BC4E28F238B9004336C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +44,9 @@
 		C390BC7528F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		C390BC7628F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C390BC7728F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3B0971328F30FD5002104F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C3B0971728F31247002104F0 /* BreedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTableViewController.swift; sourceTree = "<group>"; };
+		C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				C390BC5028F238B9004336C4 /* WelcomeViewController.swift */,
+				C3B0971728F31247002104F0 /* BreedsTableViewController.swift */,
+				C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,8 +123,10 @@
 		C390BC6628F23A2E004336C4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C3B0971928F315D0002104F0 /* Extentions */,
 				C390BC6728F23DF4004336C4 /* NetworkEngine */,
 				C390BC6C28F2420F004336C4 /* DogEndpoint.swift */,
+				C3B0971328F30FD5002104F0 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -126,6 +138,14 @@
 				C390BC6A28F23F7A004336C4 /* Endpoint.swift */,
 			);
 			path = NetworkEngine;
+			sourceTree = "<group>";
+		};
+		C3B0971928F315D0002104F0 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,12 +223,16 @@
 			files = (
 				C390BC5128F238B9004336C4 /* WelcomeViewController.swift in Sources */,
 				C390BC6928F23E24004336C4 /* NetworkEngine.swift in Sources */,
+				C3B0971D28F39103002104F0 /* BreedImagesTableViewController.swift in Sources */,
+				C3B0971828F31247002104F0 /* BreedsTableViewController.swift in Sources */,
 				C390BC6F28F2965B004336C4 /* ResponseModels.swift in Sources */,
 				C390BC4D28F238B9004336C4 /* AppDelegate.swift in Sources */,
+				C37412C928F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift in Sources */,
 				C390BC6D28F2420F004336C4 /* DogEndpoint.swift in Sources */,
 				C390BC5728F238B9004336C4 /* Dogs.xcdatamodeld in Sources */,
 				C390BC6B28F23F7A004336C4 /* Endpoint.swift in Sources */,
 				C390BC4F28F238B9004336C4 /* SceneDelegate.swift in Sources */,
+				C3B0971428F30FD5002104F0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

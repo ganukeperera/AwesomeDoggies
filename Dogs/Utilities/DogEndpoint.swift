@@ -31,9 +31,9 @@ enum DogEndpoint: Endpoint{
         case .getAllBreeds:
             return "/api/breeds/list/all"
         case let .getAllImages(breed):
-            return "api/breed/\(breed)/images"
+            return "/api/breed/\(breed)/images"
         case let .getImagesBySubBreed(breed, subBreed):
-            return "api/breed/\(breed)/\(subBreed)/images"
+            return "/api/breed/\(breed)/\(subBreed)/images"
         }
     }
     
