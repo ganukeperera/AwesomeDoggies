@@ -11,6 +11,8 @@ class BreedsTableViewController: UITableViewController {
 
     var breeds: [String] = []
     var imagesListForBreed: [String] = []
+    var selectedBreed: String?
+    var selectedSubBreed: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,16 +48,30 @@ class BreedsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedBreed = breeds[indexPath.row]
+        selectedBreed = breeds[indexPath.row]
+        guard let selectedBreed = selectedBreed else {
+            return
+        }
         let endpoint = DogEndpoint.getAllImages(breed: selectedBreed)
         NetworkEngine.request(endPoint: endpoint) { (result: Result<ImageResponse,Error>) in
             switch result {
             case .success(let success):
                 self.imagesListForBreed = success.message
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: K.Id.Segue.toBreedImageList, sender: self)
+                }
             case .failure(let failure):
                 print("Error while getting image paths. Error = \(failure.localizedDescription)")
                 
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let imageListView = segue.destination as? BreedImagesTableViewController{
+            imageListView.imagesListForBreed = imagesListForBreed
+            imageListView.breed = selectedBreed
+            imageListView.subBreed = selectedSubBreed
         }
     }
 

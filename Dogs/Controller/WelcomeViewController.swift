@@ -15,6 +15,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
 }
@@ -50,10 +51,11 @@ extension WelcomeViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.Id.Segue.toBreedList{
-            let breedCTRL = segue.destination as? BreedsTableViewController
-            let array = breeds?.message.map{$0.key}.sorted()
-            if let array = array {
-                breedCTRL?.breeds = array
+            if let breedCTRL = segue.destination as? BreedsTableViewController {
+                let array = breeds?.message.map{$0.key}.sorted()
+                if let array = array {
+                    breedCTRL.breeds = array
+                }
             }
         }
     }

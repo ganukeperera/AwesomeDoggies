@@ -23,6 +23,11 @@
 		C3B0971428F30FD5002104F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971328F30FD5002104F0 /* Constants.swift */; };
 		C3B0971828F31247002104F0 /* BreedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971728F31247002104F0 /* BreedsTableViewController.swift */; };
 		C3B0971D28F39103002104F0 /* BreedImagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */; };
+		C3FA234B28FA2D6100631EED /* BreedImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA234928FA2D6100631EED /* BreedImageViewCell.swift */; };
+		C3FA234C28FA2D6100631EED /* BreedImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FA234A28FA2D6100631EED /* BreedImageViewCell.xib */; };
+		C3FA234F28FA425E00631EED /* ManageFavourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA234E28FA425E00631EED /* ManageFavourites.swift */; };
+		C3FA235128FA7AEA00631EED /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA235028FA7AEA00631EED /* Breed.swift */; };
+		C3FA235328FB85E600631EED /* FavouriteBreedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA235228FB85E600631EED /* FavouriteBreedsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +52,11 @@
 		C3B0971328F30FD5002104F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C3B0971728F31247002104F0 /* BreedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTableViewController.swift; sourceTree = "<group>"; };
 		C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesTableViewController.swift; sourceTree = "<group>"; };
+		C3FA234928FA2D6100631EED /* BreedImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageViewCell.swift; sourceTree = "<group>"; };
+		C3FA234A28FA2D6100631EED /* BreedImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedImageViewCell.xib; sourceTree = "<group>"; };
+		C3FA234E28FA425E00631EED /* ManageFavourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFavourites.swift; sourceTree = "<group>"; };
+		C3FA235028FA7AEA00631EED /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		C3FA235228FB85E600631EED /* FavouriteBreedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 				C390BC4C28F238B9004336C4 /* AppDelegate.swift */,
 				C390BC4E28F238B9004336C4 /* SceneDelegate.swift */,
 				C390BC6628F23A2E004336C4 /* Utilities */,
+				C3FA234D28FA422200631EED /* DataAccess */,
 				C390BC6328F239FC004336C4 /* Model */,
 				C390BC6428F23A04004336C4 /* View */,
 				C390BC6528F23A14004336C4 /* Controller */,
@@ -98,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				C390BC6E28F2965B004336C4 /* ResponseModels.swift */,
+				C3FA235028FA7AEA00631EED /* Breed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				C390BC5228F238B9004336C4 /* Main.storyboard */,
+				C3FA234928FA2D6100631EED /* BreedImageViewCell.swift */,
+				C3FA234A28FA2D6100631EED /* BreedImageViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +130,7 @@
 				C390BC5028F238B9004336C4 /* WelcomeViewController.swift */,
 				C3B0971728F31247002104F0 /* BreedsTableViewController.swift */,
 				C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */,
+				C3FA235228FB85E600631EED /* FavouriteBreedsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,6 +161,14 @@
 				C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		C3FA234D28FA422200631EED /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				C3FA234E28FA425E00631EED /* ManageFavourites.swift */,
+			);
+			path = DataAccess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FA234C28FA2D6100631EED /* BreedImageViewCell.xib in Resources */,
 				C390BC5C28F238BB004336C4 /* LaunchScreen.storyboard in Resources */,
 				C390BC7228F2DCF3004336C4 /* Localizable.strings in Resources */,
 				C390BC5928F238BB004336C4 /* Assets.xcassets in Resources */,
@@ -223,11 +247,15 @@
 			files = (
 				C390BC5128F238B9004336C4 /* WelcomeViewController.swift in Sources */,
 				C390BC6928F23E24004336C4 /* NetworkEngine.swift in Sources */,
+				C3FA234B28FA2D6100631EED /* BreedImageViewCell.swift in Sources */,
+				C3FA235128FA7AEA00631EED /* Breed.swift in Sources */,
+				C3FA235328FB85E600631EED /* FavouriteBreedsTableViewController.swift in Sources */,
 				C3B0971D28F39103002104F0 /* BreedImagesTableViewController.swift in Sources */,
 				C3B0971828F31247002104F0 /* BreedsTableViewController.swift in Sources */,
 				C390BC6F28F2965B004336C4 /* ResponseModels.swift in Sources */,
 				C390BC4D28F238B9004336C4 /* AppDelegate.swift in Sources */,
 				C37412C928F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift in Sources */,
+				C3FA234F28FA425E00631EED /* ManageFavourites.swift in Sources */,
 				C390BC6D28F2420F004336C4 /* DogEndpoint.swift in Sources */,
 				C390BC5728F238B9004336C4 /* Dogs.xcdatamodeld in Sources */,
 				C390BC6B28F23F7A004336C4 /* Endpoint.swift in Sources */,
