@@ -31,8 +31,12 @@ class FavouriteBreedsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "BreedImageViewCell", bundle: .main), forCellReuseIdentifier: K.Id.Cell.breedImageCell)
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.Id.Cell.breedImageCell, for: indexPath) as? BreedImageViewCell, let favouriteItems = favouriteItems else {
+        
+        let cellIdentifier = K.Id.Cell.breedImageCell
+        
+        tableView.register(UINib(nibName: "BreedImageViewCell", bundle: .main), forCellReuseIdentifier: cellIdentifier)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? BreedImageViewCell, let favouriteItems = favouriteItems else {
             
             return UITableViewCell()
         }
@@ -40,13 +44,17 @@ class FavouriteBreedsTableViewController: UITableViewController {
         if let url = favourite.fileURL, let breed = favourite.breed {
             let breed = Breed(url: url, breed: breed, subBreed: favourite.subBreed)
             cell.isFavourite = true
-            cell.setup(breed)
+            cell.setup(breed, showLabels: true)
         }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180.0
+        return 300.0
     }
+}
+
+extension FavouriteBreedsTableViewController: UISearchBarDelegate{
+    
 }

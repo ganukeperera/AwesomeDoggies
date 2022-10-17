@@ -29,6 +29,10 @@ class ManageFavourites{
             addFavourite(breed)
         }
     }
+    
+    func isMarkedFavourte(_ breed: Breed) -> Bool{
+        return checkExistance(breed.url)
+    }
 }
 
 //MARK: - CRUD

@@ -8,6 +8,14 @@
 import Foundation
 import UIKit
 
+
+// NSCache is faster for access since it is in memory.
+// But the cache data will be removed if the device is restart or app restart
+// URLCache is both in memory and disk
+// TODO: Migrate from NSCache to URLCache
+// https://medium.com/@master13sust/to-nscache-or-not-to-nscache-what-is-the-urlcache-35a0c3b02598
+// https://levelup.gitconnected.com/image-caching-with-urlcache-4eca5afb543a
+
 let imageCache = NSCache<NSString,UIImage>()
 
 extension UIImageView{
@@ -15,7 +23,12 @@ extension UIImageView{
     @discardableResult
     func loadImageFrom(_ urlString:String, _ placeholderImage: UIImage? = nil) -> URLSessionDataTask?{
         
-        image = nil;
+        if let placeholder = placeholderImage {
+            image = placeholder
+        }else{
+            // Nulling out the image to avoid showing images in previous cells when using with table view cells
+            image = nil;
+        }
         
         if let image = imageCache.object(forKey: NSString(string: urlString)) {
             self.image = image
@@ -26,9 +39,6 @@ extension UIImageView{
             return nil
         }
         
-        if let placeholder = placeholderImage {
-            image = placeholder
-        }
         
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             

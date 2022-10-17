@@ -9,6 +9,9 @@ import Foundation
 
 class NetworkEngine{
     
+    // This method can be used to process JSON data received from remote endpoint over http/https
+    // JSON redponse will be mapped to povided Codable object model
+    
     class func request<T:Codable>(endPoint: Endpoint, completion:@escaping (Result<T,Error>)->Void)->Void{
         
         let urlComponents = NSURLComponents()
@@ -22,6 +25,8 @@ class NetworkEngine{
             return
         }
         
+        // Using default configuration as this project sends simple requests
+        // No need of using customized configurations as of now
         let session = URLSession(configuration: .default)
         let urlRequest = URLRequest(url: url)
         let dataTask = session.dataTask(with: urlRequest) { data, response, error in

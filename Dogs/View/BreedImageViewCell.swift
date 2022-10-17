@@ -11,6 +11,9 @@ class BreedImageViewCell: UITableViewCell {
     
     @IBOutlet var breedImageView: UIImageView!
     @IBOutlet weak var favouriteButton: UIButton!
+    @IBOutlet weak var breedNameLabel: UILabel!
+    @IBOutlet weak var subBreedNameLabel: UILabel!
+    @IBOutlet weak var breedNameHeightConstraints: NSLayoutConstraint!
     
     var isFavourite: Bool = false
     var breed: Breed?
@@ -26,11 +29,16 @@ class BreedImageViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(_ breed: Breed){
+    func setup(_ breed: Breed, showLabels: Bool){
         self.breed = breed
         let thubnailImage = UIImage(named: "placeholder")
-        imageView?.loadImageFrom(breed.url, thubnailImage)
+        breedImageView?.loadImageFrom(breed.url, thubnailImage)
         favouriteButton.isSelected = isFavourite
+        if showLabels {
+            self.breedNameLabel.text = breed.breed.capitalized
+            self.subBreedNameLabel.text = breed.subBreed?.capitalized ?? ""
+        }
+        breedImageView.layer.cornerRadius = 20.0
     }
 
 }

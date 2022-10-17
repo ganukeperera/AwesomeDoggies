@@ -9,14 +9,22 @@ import UIKit
 
 class BreedImagesTableViewController: UITableViewController {
     
-    var imagesListForBreed: [String] = []
-    var breed: String!
-    var subBreed: String?
+     var imagesListForBreed: [String] = []
+     var breed: String!
+     var subBreed: String?
+    private var favouritList: [String]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        favouritList = ManageFavourites.shared.favouriteItems.map {$0.fileURL ?? ""}
     }
     
 
@@ -28,17 +36,22 @@ class BreedImagesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "BreedImageViewCell", bundle: .main), forCellReuseIdentifier:  K.Id.Cell.breedImageCell)
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.Id.Cell.breedImageCell, for: indexPath) as? BreedImageViewCell else{
+        let cellIdentifier = K.Id.Cell.breedImageCell
+        tableView.register(UINib(nibName: "BreedImageViewCell", bundle: .main), forCellReuseIdentifier: cellIdentifier )
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? BreedImageViewCell else{
             return UITableViewCell()
         }
-        let breed = Breed(url: imagesListForBreed[indexPath.row], breed: breed, subBreed: subBreed)
-        cell.setup(breed)
+        let fileURL = imagesListForBreed[indexPath.row]
+        let breed = Breed(url: fileURL, breed: breed, subBreed: subBreed)
+        if let favouritList = favouritList {
+            cell.isFavourite = favouritList.contains(fileURL)
+        }
+        cell.setup(breed,showLabels: false)
         return cell
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180.0
+        return 300.0
     }
 }
 
