@@ -16,7 +16,7 @@ class BreedsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Dogs"
+        title = NSLocalizedString("BreedListCTRL.Title", comment: "Doggies")
         tableView.reloadData()
     }
 
@@ -38,7 +38,7 @@ class BreedsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
 //        cell.textLabel?.text = breeds[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = breeds[indexPath.row]
+        content.text = breeds[indexPath.row].capitalized
         content.textProperties.color = .black
         if let font =  UIFont(name: "Helvetica", size: 20.0) {
             content.textProperties.font = font

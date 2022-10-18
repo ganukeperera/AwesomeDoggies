@@ -18,12 +18,15 @@ class BreedImagesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let breed = breed {
+            title = breed.capitalized
+        }
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        // This is to check any images been loadded has set as favourite by the user
         favouritList = ManageFavourites.shared.favouriteItems.map {$0.fileURL ?? ""}
     }
     

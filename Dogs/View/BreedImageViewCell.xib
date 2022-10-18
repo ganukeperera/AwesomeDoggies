@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,16 +40,33 @@
                         <color key="textColor" systemColor="systemYellowColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPH-LV-T71">
+                        <rect key="frame" x="268" y="233" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Kye-Q9-IkH"/>
+                            <constraint firstAttribute="width" constant="30" id="vZu-9w-veK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9z-9s-bdg">
                         <rect key="frame" x="258" y="222" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="BkV-FI-jl3"/>
                             <constraint firstAttribute="width" constant="50" id="r9K-Sn-8TB"/>
                         </constraints>
-                        <color key="tintColor" red="1" green="0.95865221088435371" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemOrangeColor"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="star" catalog="system"/>
-                        <state key="selected" image="star.fill" catalog="system"/>
+                        <state key="normal">
+                            <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                        </state>
+                        <state key="selected">
+                            <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
+                        </state>
                         <connections>
                             <action selector="favouriteButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZkV-Sj-gkb"/>
                         </connections>
@@ -60,10 +78,12 @@
                     <constraint firstAttribute="bottom" secondItem="zfI-Qf-6B9" secondAttribute="bottom" constant="10" id="AOH-dM-xUU"/>
                     <constraint firstAttribute="bottom" secondItem="D9z-9s-bdg" secondAttribute="bottom" constant="8" id="Glf-3Y-MHe"/>
                     <constraint firstAttribute="trailing" secondItem="Ugb-B1-SJs" secondAttribute="trailing" constant="20" id="RSU-vL-7ma"/>
+                    <constraint firstItem="kPH-LV-T71" firstAttribute="centerY" secondItem="D9z-9s-bdg" secondAttribute="centerY" constant="1" id="RpT-Cn-IUl"/>
                     <constraint firstItem="Trk-fR-Add" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="S5Q-cu-dRc"/>
                     <constraint firstAttribute="trailing" secondItem="zfI-Qf-6B9" secondAttribute="trailing" constant="15" id="YNL-kI-tYH"/>
                     <constraint firstItem="zfI-Qf-6B9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hqT-EG-VnN"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Trk-fR-Add" secondAttribute="trailing" constant="10" id="ltY-td-J7G"/>
+                    <constraint firstItem="kPH-LV-T71" firstAttribute="centerX" secondItem="D9z-9s-bdg" secondAttribute="centerX" id="mGa-My-JFx"/>
                     <constraint firstItem="Ugb-B1-SJs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oQj-fP-0DN"/>
                     <constraint firstItem="Trk-fR-Add" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="smo-bo-ATP"/>
                     <constraint firstItem="Ugb-B1-SJs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="vXm-jv-aIH"/>
@@ -83,6 +103,12 @@
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

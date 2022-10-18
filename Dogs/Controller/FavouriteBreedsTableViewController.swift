@@ -9,15 +9,21 @@ import UIKit
 
 class FavouriteBreedsTableViewController: UITableViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     private var favouriteItems: [Favourite]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        searchBar.searchTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        favouriteItems = ManageFavourites.shared.favouriteItems
+        tableView.reloadData()
+    }
+    
+    func loadAllFavourites() {
         favouriteItems = ManageFavourites.shared.favouriteItems
         tableView.reloadData()
     }
@@ -57,4 +63,29 @@ class FavouriteBreedsTableViewController: UITableViewController {
 
 extension FavouriteBreedsTableViewController: UISearchBarDelegate{
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchText = searchBar.text {
+            let items = ManageFavourites.shared.getSearchResults(searchText: searchText)
+            if items.count > 0 {
+                favouriteItems = items
+                tableView.reloadData()
+            }
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        loadAllFavourites()
+        searchBar.searchTextField.resignFirstResponder()
+    }
+}
+
+extension FavouriteBreedsTableViewController: UITextFieldDelegate{
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        loadAllFavourites()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.searchBar.resignFirstResponder()
+        }
+        return true
+    }
 }

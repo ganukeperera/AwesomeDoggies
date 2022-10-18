@@ -33,6 +33,19 @@ class ManageFavourites{
     func isMarkedFavourte(_ breed: Breed) -> Bool{
         return checkExistance(breed.url)
     }
+    
+    func getSearchResults(searchText: String) -> [Favourite] {
+        let fetchRequest: NSFetchRequest<Favourite> = Favourite.fetchRequest()
+        let predicate = NSPredicate(format: "breed CONTAINS[cd] %@", searchText)
+        fetchRequest.predicate = predicate
+        var results:[Favourite] = [Favourite]()
+        do{
+            results = try self.context.fetch(fetchRequest)
+        }catch{
+            assertionFailure("Failed while getting filtured data")
+        }
+        return results
+    }
 }
 
 //MARK: - CRUD
