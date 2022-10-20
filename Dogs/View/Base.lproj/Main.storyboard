@@ -6,7 +6,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgQ-Lv-PQd">
                                 <rect key="frame" x="50" y="653" width="314" height="60"/>
-                                <color key="backgroundColor" name="WelcomeCTRLSearchBg"/>
+                                <color key="backgroundColor" name="text"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="yAv-bY-Vwc"/>
                                 </constraints>
@@ -40,7 +39,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="navbar"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GgQ-Lv-PQd" secondAttribute="trailing" constant="50" id="GJP-tg-qtt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GgQ-Lv-PQd" secondAttribute="bottom" constant="100" id="Irw-Nm-83f"/>
@@ -65,7 +64,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="OfB-Tj-Sqr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="navbar"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BreedCell" rowHeight="44" id="dyy-8y-AfF" customClass="BreedImageViewCell" customModule="Dogs" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
@@ -97,7 +96,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="HG8-RK-Apb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="navbar"/>
                         <connections>
                             <outlet property="dataSource" destination="8NV-ql-mN6" id="99E-zh-I3m"/>
                             <outlet property="delegate" destination="8NV-ql-mN6" id="FYm-03-h3Y"/>
@@ -107,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POU-kE-0oS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3570" y="108"/>
+            <point key="canvasLocation" x="3530" y="84"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wBB-QN-VAX">
@@ -118,6 +117,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Ugo-Mh-12e" kind="relationship" relationship="viewControllers" id="wCn-mM-MHT"/>
@@ -135,10 +136,13 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nYZ-QX-Mo0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Filter images by breed" showsCancelButton="YES" id="QQA-M1-aMx">
+                        <color key="backgroundColor" name="navbar"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Filter images by Breed" showsCancelButton="YES" id="QQA-M1-aMx">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="WelcomeCTRLSearchText"/>
+                            <color key="barTintColor" name="navbar"/>
                             <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="name"/>
                             <connections>
                                 <outlet property="delegate" destination="nLS-Yh-lDE" id="rVg-8M-yI6"/>
@@ -170,6 +174,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gME-TL-oba">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="navbar"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="navbar"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="WelcomeCTRLSearchText"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="WelcomeCTRLSearchText"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -183,14 +196,14 @@
     </scenes>
     <resources>
         <image name="pawprint.fill" catalog="system" width="128" height="113"/>
-        <namedColor name="WelcomeCTRLSearchBg">
-            <color red="0.18400000035762787" green="0.4309999942779541" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="WelcomeCTRLSearchText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="navbar">
+            <color red="0.086274504660000001" green="0.086274504660000001" blue="0.086274504660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="text">
+            <color red="0.34901960784313724" green="0.73725490196078436" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
