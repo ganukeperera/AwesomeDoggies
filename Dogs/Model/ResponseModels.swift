@@ -18,3 +18,8 @@ struct BreedResponse: Codable {
     let message: [String:[String]]
     
 }
+
+struct RandomImageResponse: Codable{
+    let status: String
+    let message: String
+}

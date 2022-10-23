@@ -35,16 +35,25 @@ class BreedsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let CellIdentifier = K.Id.Cell.breedCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
-//        cell.textLabel?.text = breeds[indexPath.row]
-        var content = cell.defaultContentConfiguration()
-        content.text = breeds[indexPath.row].capitalized
-        content.textProperties.color = .black
-        if let font =  UIFont(name: "Helvetica", size: 20.0) {
-            content.textProperties.font = font
+        tableView.register(UINib (nibName: "BreedTableViewCell", bundle: .main), forCellReuseIdentifier: CellIdentifier)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as? BreedTableViewCell else{
+            return UITableViewCell()
         }
-        cell.contentConfiguration = content
+//        cell.textLabel?.text = breeds[indexPath.row]
+//        var content = cell.defaultContentConfiguration()
+//        content.text = breeds[indexPath.row].capitalized
+//        content.textProperties.color = .black
+//        if let font =  UIFont(name: "Helvetica", size: 20.0) {
+//            content.textProperties.font = font
+//        }
+//        cell.contentConfiguration = content
+        cell.setupCell(with: breeds[indexPath.row])
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125.0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

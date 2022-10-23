@@ -20,8 +20,17 @@ let imageCache = NSCache<NSString,UIImage>()
 
 extension UIImageView{
     
+    func cachedImageAvailableFor(key: String) -> Bool{
+        
+        if let image = imageCache.object(forKey: NSString(string: key)) {
+            self.image = image
+            return false
+        }
+        return true
+    }
+    
     @discardableResult
-    func loadImageFrom(_ urlString:String, _ placeholderImage: UIImage? = nil) -> URLSessionDataTask?{
+    func loadImageFrom(_ urlString:String, _ placeholderImage: UIImage? = nil, _ cachedKey: String? = nil) -> URLSessionDataTask?{
         
         if let placeholder = placeholderImage {
             image = placeholder
@@ -30,7 +39,14 @@ extension UIImageView{
             image = nil;
         }
         
-        if let image = imageCache.object(forKey: NSString(string: urlString)) {
+        var key = ""
+        if let cachedKey = cachedKey {
+            key = cachedKey
+        } else {
+            key = urlString
+        }
+        
+        if let image = imageCache.object(forKey: NSString(string: key)) {
             self.image = image
             return nil
         }
@@ -50,7 +66,7 @@ extension UIImageView{
             DispatchQueue.main.async {
                 if let data = data {
                     if let downloadedImage = UIImage(data: data){
-                        imageCache.setObject(downloadedImage, forKey: NSString(string: urlString))
+                        imageCache.setObject(downloadedImage, forKey: NSString(string: key))
                         self.image = downloadedImage
                     }
                 }

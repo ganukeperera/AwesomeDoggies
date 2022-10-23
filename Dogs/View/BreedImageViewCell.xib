@@ -88,7 +88,6 @@
                     <constraint firstItem="Ugb-B1-SJs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oQj-fP-0DN"/>
                     <constraint firstItem="Trk-fR-Add" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="smo-bo-ATP"/>
                     <constraint firstItem="Ugb-B1-SJs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="vXm-jv-aIH"/>
-                    <constraint firstAttribute="top" secondItem="Ugb-B1-SJs" secondAttribute="bottom" constant="-45" id="wtA-hR-xkA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
