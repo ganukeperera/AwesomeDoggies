@@ -5,3 +5,7 @@
   Created by Ganuke Perera on 10/9/22.
   
 */
+
+"WelcomeCTRL.Alert.Wait" = "Please wait...";
+"WelcomeCTRL.Button.Search" = "Sniff Out";
+"BreedListCTRL.Title" = "Doggies";

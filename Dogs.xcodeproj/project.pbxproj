@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C37412C928F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */; };
 		C390BC4D28F238B9004336C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC4C28F238B9004336C4 /* AppDelegate.swift */; };
 		C390BC4F28F238B9004336C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC4E28F238B9004336C4 /* SceneDelegate.swift */; };
 		C390BC5128F238B9004336C4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC5028F238B9004336C4 /* WelcomeViewController.swift */; };
@@ -19,9 +20,20 @@
 		C390BC6D28F2420F004336C4 /* DogEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC6C28F2420F004336C4 /* DogEndpoint.swift */; };
 		C390BC6F28F2965B004336C4 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC6E28F2965B004336C4 /* ResponseModels.swift */; };
 		C390BC7228F2DCF3004336C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C390BC7428F2DCF3004336C4 /* Localizable.strings */; };
+		C3A9525C2900E995006853AE /* BreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9525A2900E995006853AE /* BreedTableViewCell.swift */; };
+		C3A9525D2900E995006853AE /* BreedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A9525B2900E995006853AE /* BreedTableViewCell.xib */; };
+		C3B0971428F30FD5002104F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971328F30FD5002104F0 /* Constants.swift */; };
+		C3B0971828F31247002104F0 /* BreedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971728F31247002104F0 /* BreedsTableViewController.swift */; };
+		C3B0971D28F39103002104F0 /* BreedImagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */; };
+		C3FA234B28FA2D6100631EED /* BreedImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA234928FA2D6100631EED /* BreedImageViewCell.swift */; };
+		C3FA234C28FA2D6100631EED /* BreedImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FA234A28FA2D6100631EED /* BreedImageViewCell.xib */; };
+		C3FA234F28FA425E00631EED /* ManageFavourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA234E28FA425E00631EED /* ManageFavourites.swift */; };
+		C3FA235128FA7AEA00631EED /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA235028FA7AEA00631EED /* Breed.swift */; };
+		C3FA235328FB85E600631EED /* FavouriteBreedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA235228FB85E600631EED /* FavouriteBreedsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ThumbnailImage.swift"; sourceTree = "<group>"; };
 		C390BC4928F238B9004336C4 /* Dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390BC4C28F238B9004336C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C390BC4E28F238B9004336C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,16 @@
 		C390BC7528F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		C390BC7628F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C390BC7728F2DDA1004336C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3A9525A2900E995006853AE /* BreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTableViewCell.swift; sourceTree = "<group>"; };
+		C3A9525B2900E995006853AE /* BreedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedTableViewCell.xib; sourceTree = "<group>"; };
+		C3B0971328F30FD5002104F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C3B0971728F31247002104F0 /* BreedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTableViewController.swift; sourceTree = "<group>"; };
+		C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesTableViewController.swift; sourceTree = "<group>"; };
+		C3FA234928FA2D6100631EED /* BreedImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImageViewCell.swift; sourceTree = "<group>"; };
+		C3FA234A28FA2D6100631EED /* BreedImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedImageViewCell.xib; sourceTree = "<group>"; };
+		C3FA234E28FA425E00631EED /* ManageFavourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFavourites.swift; sourceTree = "<group>"; };
+		C3FA235028FA7AEA00631EED /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		C3FA235228FB85E600631EED /* FavouriteBreedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBreedsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,7 @@
 				C390BC4C28F238B9004336C4 /* AppDelegate.swift */,
 				C390BC4E28F238B9004336C4 /* SceneDelegate.swift */,
 				C390BC6628F23A2E004336C4 /* Utilities */,
+				C3FA234D28FA422200631EED /* DataAccess */,
 				C390BC6328F239FC004336C4 /* Model */,
 				C390BC6428F23A04004336C4 /* View */,
 				C390BC6528F23A14004336C4 /* Controller */,
@@ -90,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				C390BC6E28F2965B004336C4 /* ResponseModels.swift */,
+				C3FA235028FA7AEA00631EED /* Breed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				C390BC5228F238B9004336C4 /* Main.storyboard */,
+				C3FA234928FA2D6100631EED /* BreedImageViewCell.swift */,
+				C3FA234A28FA2D6100631EED /* BreedImageViewCell.xib */,
+				C3A9525A2900E995006853AE /* BreedTableViewCell.swift */,
+				C3A9525B2900E995006853AE /* BreedTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				C390BC5028F238B9004336C4 /* WelcomeViewController.swift */,
+				C3B0971728F31247002104F0 /* BreedsTableViewController.swift */,
+				C3B0971C28F39103002104F0 /* BreedImagesTableViewController.swift */,
+				C3FA235228FB85E600631EED /* FavouriteBreedsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,8 +144,10 @@
 		C390BC6628F23A2E004336C4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C3B0971928F315D0002104F0 /* Extentions */,
 				C390BC6728F23DF4004336C4 /* NetworkEngine */,
 				C390BC6C28F2420F004336C4 /* DogEndpoint.swift */,
+				C3B0971328F30FD5002104F0 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -126,6 +159,22 @@
 				C390BC6A28F23F7A004336C4 /* Endpoint.swift */,
 			);
 			path = NetworkEngine;
+			sourceTree = "<group>";
+		};
+		C3B0971928F315D0002104F0 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		C3FA234D28FA422200631EED /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				C3FA234E28FA425E00631EED /* ManageFavourites.swift */,
+			);
+			path = DataAccess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +236,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FA234C28FA2D6100631EED /* BreedImageViewCell.xib in Resources */,
 				C390BC5C28F238BB004336C4 /* LaunchScreen.storyboard in Resources */,
+				C3A9525D2900E995006853AE /* BreedTableViewCell.xib in Resources */,
 				C390BC7228F2DCF3004336C4 /* Localizable.strings in Resources */,
 				C390BC5928F238BB004336C4 /* Assets.xcassets in Resources */,
 				C390BC5428F238B9004336C4 /* Main.storyboard in Resources */,
@@ -203,12 +254,21 @@
 			files = (
 				C390BC5128F238B9004336C4 /* WelcomeViewController.swift in Sources */,
 				C390BC6928F23E24004336C4 /* NetworkEngine.swift in Sources */,
+				C3FA234B28FA2D6100631EED /* BreedImageViewCell.swift in Sources */,
+				C3FA235128FA7AEA00631EED /* Breed.swift in Sources */,
+				C3FA235328FB85E600631EED /* FavouriteBreedsTableViewController.swift in Sources */,
+				C3B0971D28F39103002104F0 /* BreedImagesTableViewController.swift in Sources */,
+				C3A9525C2900E995006853AE /* BreedTableViewCell.swift in Sources */,
+				C3B0971828F31247002104F0 /* BreedsTableViewController.swift in Sources */,
 				C390BC6F28F2965B004336C4 /* ResponseModels.swift in Sources */,
 				C390BC4D28F238B9004336C4 /* AppDelegate.swift in Sources */,
+				C37412C928F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift in Sources */,
+				C3FA234F28FA425E00631EED /* ManageFavourites.swift in Sources */,
 				C390BC6D28F2420F004336C4 /* DogEndpoint.swift in Sources */,
 				C390BC5728F238B9004336C4 /* Dogs.xcdatamodeld in Sources */,
 				C390BC6B28F23F7A004336C4 /* Endpoint.swift in Sources */,
 				C390BC4F28F238B9004336C4 /* SceneDelegate.swift in Sources */,
+				C3B0971428F30FD5002104F0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

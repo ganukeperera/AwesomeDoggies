@@ -10,6 +10,7 @@ import Foundation
 enum DogEndpoint: Endpoint{
     case getAllBreeds
     case getAllImages(breed: String)
+    case getRandomImage(breed: String)
     case getImagesBySubBreed(breed: String,subBreed: String)
     
     var scheme: String{
@@ -31,9 +32,11 @@ enum DogEndpoint: Endpoint{
         case .getAllBreeds:
             return "/api/breeds/list/all"
         case let .getAllImages(breed):
-            return "api/breed/\(breed)/images"
+            return "/api/breed/\(breed)/images"
+        case let .getRandomImage(breed):
+            return "/api/breed/\(breed)/images/random"
         case let .getImagesBySubBreed(breed, subBreed):
-            return "api/breed/\(breed)/\(subBreed)/images"
+            return "/api/breed/\(breed)/\(subBreed)/images"
         }
     }
     
@@ -42,7 +45,6 @@ enum DogEndpoint: Endpoint{
         default:
             return []
         }
-        
     }
     
     var method: String{
