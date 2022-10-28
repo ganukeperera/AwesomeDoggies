@@ -16,7 +16,7 @@ class BreedsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("BreedListCTRL.Title", comment: "Doggies")
+        title = NSLocalizedString("Title", comment: "Doggies")
         tableView.reloadData()
     }
 

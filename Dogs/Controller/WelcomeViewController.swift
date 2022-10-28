@@ -8,15 +8,31 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet private weak var placeHolderImage: UIImageView!
+    @IBOutlet private weak var placeHolderView: UIView!
+    @IBOutlet private weak var puppyImage: UIImageView!
+    @IBOutlet private weak var taglineLabel: UILabel!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet private weak var mainTitleLabel: UILabel!
+    
     var alertView: UIAlertController?
     var breeds: BreedResponse?
-    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchButton.titleLabel?.text = NSLocalizedString("WelcomeCTRL.Button.Search", comment: "Sniff Out")
+        taglineLabel.text = NSLocalizedString("WelcomeCTRL.Label.Tagline", comment: "find your heart dog here")
+        mainTitleLabel.text = NSLocalizedString("Title", comment: "Doggies")
+        setUpView()
     }
     
+    private func setUpView() {
+        
+        self.placeHolderImage.layer.cornerRadius = self.placeHolderImage.frame.size.width / 2.0
+        self.placeHolderView.layer.cornerRadius = self.placeHolderView.frame.size.width / 2.0
+        self.puppyImage.layer.cornerRadius = self.puppyImage.frame.size.width / 2.0
+        
+    }
 }
 
 //MARK: - Action Outlets

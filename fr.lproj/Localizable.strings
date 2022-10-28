@@ -5,3 +5,7 @@
   Created by Ganuke Perera on 10/9/22.
   
 */
+"WelcomeCTRL.Alert.Wait" = "S'il vous plaît, attendez...";
+"WelcomeCTRL.Button.Search" = "Renifler";
+"WelcomeCTRL.Label.Tagline" = "Trouvez votre toutou de cœur ici";
+"Title" = "Doggies";

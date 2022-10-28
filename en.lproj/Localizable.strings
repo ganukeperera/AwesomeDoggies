@@ -8,4 +8,5 @@
 
 "WelcomeCTRL.Alert.Wait" = "Please wait...";
 "WelcomeCTRL.Button.Search" = "Sniff Out";
-"BreedListCTRL.Title" = "Doggies";
+"WelcomeCTRL.Label.Tagline" = "Find your heart doggie here";
+"Title" = "Doggies";
