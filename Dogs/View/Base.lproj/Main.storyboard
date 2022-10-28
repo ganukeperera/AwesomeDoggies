@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,8 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgQ-Lv-PQd">
-                                <rect key="frame" x="50" y="653" width="314" height="60"/>
-                                <color key="backgroundColor" name="text"/>
+                                <rect key="frame" x="50" y="723" width="314" height="60"/>
+                                <color key="backgroundColor" name="themeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="yAv-bY-Vwc"/>
                                 </constraints>
@@ -30,26 +31,82 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loadBreadsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cu6-QP-OU4"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puppy" translatesAutoresizingMaskIntoConstraints="NO" id="UGO-fv-dJY">
+                                <rect key="frame" x="40" y="281" width="334" height="334"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UGO-fv-dJY" secondAttribute="height" id="UV5-O6-4Gs"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCh-PC-RhC">
+                                <rect key="frame" x="40" y="281" width="334" height="334"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RCh-PC-RhC" secondAttribute="height" id="GSZ-K4-CcE"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puppy" translatesAutoresizingMaskIntoConstraints="NO" id="ACq-6d-S8y">
+                                <rect key="frame" x="60" y="301" width="294" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ACq-6d-S8y" secondAttribute="height" multiplier="1:1" id="lox-Nb-M4v"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doggies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-cp-39H">
+                                <rect key="frame" x="50" y="150" width="314" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="Kf1-MA-4pe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <color key="textColor" name="themeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your heart doggie here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkY-9L-hjc">
+                                <rect key="frame" x="50" y="663" width="314" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="W5K-hD-1cn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <color key="textColor" name="WelcomeCTRLSearchText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="navbar"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GgQ-Lv-PQd" secondAttribute="trailing" constant="50" id="GJP-tg-qtt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GgQ-Lv-PQd" secondAttribute="bottom" constant="100" id="Irw-Nm-83f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GgQ-Lv-PQd" secondAttribute="bottom" constant="30" id="Irw-Nm-83f"/>
+                            <constraint firstItem="RCh-PC-RhC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LmX-TI-3z5"/>
+                            <constraint firstItem="ACq-6d-S8y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="LsF-wU-qyf"/>
+                            <constraint firstItem="Of9-cp-39H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Oo6-CF-mFm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RCh-PC-RhC" secondAttribute="trailing" constant="40" id="PJN-j1-c6H"/>
                             <constraint firstItem="GgQ-Lv-PQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Pxm-zs-sUc"/>
-                            <constraint firstItem="GgQ-Lv-PQd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZBU-xL-MWl"/>
+                            <constraint firstItem="RCh-PC-RhC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="QBk-Lm-o6d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Of9-cp-39H" secondAttribute="trailing" constant="50" id="b6V-L3-rTH"/>
+                            <constraint firstItem="UGO-fv-dJY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="hLT-IW-w0q"/>
+                            <constraint firstItem="ACq-6d-S8y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hkg-Wz-J91"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ACq-6d-S8y" secondAttribute="trailing" constant="60" id="ig5-xi-we5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YkY-9L-hjc" secondAttribute="trailing" constant="50" id="jPJ-98-5MB"/>
+                            <constraint firstItem="YkY-9L-hjc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="wgE-gK-azH"/>
+                            <constraint firstItem="Of9-cp-39H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="wm4-YU-HaB"/>
+                            <constraint firstItem="UGO-fv-dJY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xwY-Qy-5Kt"/>
+                            <constraint firstItem="GgQ-Lv-PQd" firstAttribute="top" secondItem="YkY-9L-hjc" secondAttribute="bottom" constant="30" id="yxt-J3-HeW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGO-fv-dJY" secondAttribute="trailing" constant="40" id="z18-zh-Wge"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="96r-kV-Ucz"/>
                     <connections>
+                        <outlet property="mainTitleLabel" destination="Of9-cp-39H" id="Em8-SN-ngm"/>
+                        <outlet property="placeHolderImage" destination="UGO-fv-dJY" id="JTP-xZ-MkN"/>
+                        <outlet property="placeHolderView" destination="RCh-PC-RhC" id="kIM-Y6-cjt"/>
+                        <outlet property="puppyImage" destination="ACq-6d-S8y" id="42D-ds-MJw"/>
                         <outlet property="searchButton" destination="GgQ-Lv-PQd" id="ZyZ-KA-Ql9"/>
+                        <outlet property="taglineLabel" destination="YkY-9L-hjc" id="61v-1K-jag"/>
                         <segue destination="6lX-QQ-fGZ" kind="show" identifier="GoToBreedList" id="aTo-z4-BZp"/>
                     </connections>
                 </viewController>
@@ -171,7 +228,7 @@
                             <color key="textColor" name="WelcomeCTRLSearchText"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" name="WelcomeCTRLSearchText"/>
+                            <color key="textColor" name="themeColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -186,14 +243,18 @@
     </scenes>
     <resources>
         <image name="pawprint.fill" catalog="system" width="128" height="113"/>
+        <image name="puppy" width="528" height="527"/>
         <namedColor name="WelcomeCTRLSearchText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="navbar">
             <color red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="text">
-            <color red="0.34901960784313724" green="0.73725490196078436" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="themeColor">
+            <color red="0.78823529411764703" green="0.58431372549019611" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
