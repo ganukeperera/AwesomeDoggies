@@ -2,9 +2,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/alexanderritik/Best-README-Template">
-    <img src="logo.jpeg" alt="Logo" width="100" height="100">
-  </a>
+    <img src="Logo/logo.png" alt="Logo" width="100" height="100">
   <p align="center">
     This app allow user to search dogs by breed
   </p>
