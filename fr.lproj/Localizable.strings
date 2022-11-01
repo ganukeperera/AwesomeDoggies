@@ -9,3 +9,5 @@
 "WelcomeCTRL.Button.Search" = "Renifler";
 "WelcomeCTRL.Label.Tagline" = "Trouvez votre toutou de cœur ici";
 "Title" = "Doggies";
+"FavouritesCTRL.Title" = "Favoris";
+"FavouritesCTRL.SearchBar.Placeholder" = "Recherche par race";
