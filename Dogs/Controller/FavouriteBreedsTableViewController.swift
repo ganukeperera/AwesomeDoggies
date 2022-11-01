@@ -15,6 +15,7 @@ class FavouriteBreedsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.searchTextField.delegate = self
+        searchBar.searchTextField.placeholder = NSLocalizedString("FavouritesCTRL.SearchBar.Placeholder", comment: "search by breed")
     }
     
     override func viewWillAppear(_ animated: Bool) {

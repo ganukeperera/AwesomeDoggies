@@ -185,7 +185,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="navbar"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Filter favourites by Breed" showsCancelButton="YES" id="QQA-M1-aMx">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" showsCancelButton="YES" id="QQA-M1-aMx">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

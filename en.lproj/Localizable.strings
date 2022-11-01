@@ -10,3 +10,5 @@
 "WelcomeCTRL.Button.Search" = "Sniff Out";
 "WelcomeCTRL.Label.Tagline" = "Find your heart doggie here";
 "Title" = "Doggies";
+"FavouritesCTRL.Title" = "Favourites";
+"FavouritesCTRL.SearchBar.Placeholder" = "Search by Breed";
