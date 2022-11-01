@@ -36,7 +36,6 @@ class BreedImageViewCell: UITableViewCell {
         favouriteButton.isSelected = isFavourite
         if showLabels {
             self.breedNameLabel.text = breed.breed.capitalized
-            self.subBreedNameLabel.text = breed.subBreed?.capitalized ?? ""
         }
         breedImageView.layer.cornerRadius = 20.0
     }
