@@ -28,8 +28,8 @@
 - [x] Show a photo of each breed in breed list view
 - [x] Introduce black theme
 - [x] Filter option in Favourites
-- [ ] Support for French
-- [ ] Migrate from NSCache to URLCache
+- [x] Support for French
+- [x] Migrate from NSCache to URLCache
 - [ ] Integrate RxSwift 
 - [ ] ...
 

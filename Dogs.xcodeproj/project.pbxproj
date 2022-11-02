@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C35529602911F0A1009BC738 /* URLCache+DogImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355295F2911F0A1009BC738 /* URLCache+DogImageCache.swift */; };
 		C37412C928F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */; };
 		C390BC4D28F238B9004336C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC4C28F238B9004336C4 /* AppDelegate.swift */; };
 		C390BC4F28F238B9004336C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390BC4E28F238B9004336C4 /* SceneDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C355295F2911F0A1009BC738 /* URLCache+DogImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLCache+DogImageCache.swift"; sourceTree = "<group>"; };
 		C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ThumbnailImage.swift"; sourceTree = "<group>"; };
 		C390BC4928F238B9004336C4 /* Dogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C390BC4C28F238B9004336C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				C37412C828F79B3F00EEC1CA /* UIImageView+ThumbnailImage.swift */,
+				C355295F2911F0A1009BC738 /* URLCache+DogImageCache.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			files = (
 				C390BC5128F238B9004336C4 /* WelcomeViewController.swift in Sources */,
 				C390BC6928F23E24004336C4 /* NetworkEngine.swift in Sources */,
+				C35529602911F0A1009BC738 /* URLCache+DogImageCache.swift in Sources */,
 				C3FA234B28FA2D6100631EED /* BreedImageViewCell.swift in Sources */,
 				C3FA235128FA7AEA00631EED /* Breed.swift in Sources */,
 				C3FA235328FB85E600631EED /* FavouriteBreedsTableViewController.swift in Sources */,

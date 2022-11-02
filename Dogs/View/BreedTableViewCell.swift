@@ -19,26 +19,35 @@ class BreedTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func setupCell(with breed:String){
         
-        if !self.breedImageView.cachedImageAvailableFor(key: breed){
+        let defaults = UserDefaults.standard
+        
+        if let urlString = defaults.string(forKey: breed){
+            
             let thubnailImage = UIImage(named: "placeholder")
-            let randomImageUrl = ""
-            self.breedImageView.loadImageFrom(randomImageUrl, thubnailImage, breed)
+            self.breedImageView.loadImageFrom(urlString, thubnailImage)
+            
         }else{
+            
             self.breedImageView.image = UIImage(named: "placeholder")
             let endpoint = DogEndpoint.getRandomImage(breed: breed)
+            
             NetworkEngine.request(endPoint: endpoint) { (result: Result<RandomImageResponse,Error>) in
+                
                 switch result {
+                    
                 case .success(let success):
+                    
                     let thubnailImage = UIImage(named: "placeholder")
                     let randomImageUrl = success.message
-                    self.breedImageView.loadImageFrom(randomImageUrl, thubnailImage, breed)
+                    defaults.set(randomImageUrl, forKey: breed)
+                    self.breedImageView.loadImageFrom(randomImageUrl, thubnailImage)
                     
                 case .failure(let failure):
+                    
                     assertionFailure("Error while getting random image url for \(breed), error \(failure.localizedDescription)")
                 }
             }
