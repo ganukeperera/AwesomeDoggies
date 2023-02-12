@@ -30,10 +30,9 @@
 - [x] Filter option in Favourites
 - [x] Support for French
 - [x] Migrate from NSCache to URLCache
-- [ ] Integrate RxSwift 
 - [ ] ...
 
 ## Requirements
 
 - iOS 13.0+
-- Xcode 12.5
+- Xcode 13.1
