@@ -23,16 +23,8 @@
 - [x] View favourite photos 
 - [x] Filter favourite photos by breed
 
-## Roadmap
+## Technology Stack
 
-- [x] Show a photo of each breed in breed list view
-- [x] Introduce black theme
-- [x] Filter option in Favourites
-- [x] Support for French
-- [x] Migrate from NSCache to URLCache
-- [ ] ...
-
-## Requirements
-
-- iOS 13.0+
-- Xcode 13.1
+- [x] Laguage: Swift
+- [x] UI: UIKit with Storyboard
+- [x] Core Data
